@@ -98,6 +98,13 @@ def game_intro():
 			pygame.draw.rect(gameDisplay,bright_green,(150,450,100,50))
 		else:
 			pygame.draw.rect(gameDisplay,green,(150,450,100,50))
+
+		smallText = pygame.font.Font("freesansbold.ttf",20)
+		textSurf, textRect = text_objects("GO!",smallText)
+		TextRect.center = ( 150+(100)/2,450+(50)/2 )
+		gameDisplay.blit(textSurf,TextRect)
+		
+
 		
 		pygame.draw.rect(gameDisplay,red,(550,450,100,50))
 
