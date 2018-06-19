@@ -1,6 +1,25 @@
+#0,0
+
 import pygame
 
 x =pygame.init()
+
+display_width = 800
+display_height = 600
+
+
+#color define RGB 256 choices
+black = (0,0,0)  #abscence of color
+white = (255,255,255)			# all color
+red = (255,0,0)
+green = (0,255,0)
+blue = (0,0,255)
+
+
+
+
+
+
 
 
 #dont name your game as pygame ur system gets confused!!!!
@@ -14,7 +33,7 @@ x =pygame.init()
 
 
 
-gameDisplay = pygame.display.set_mode((800,600))
+gameDisplay = pygame.display.set_mode((display_width ,display_height))
 
 #title of window  .set_caption() method
 pygame.display.set_caption("A bit Racey")
@@ -24,9 +43,23 @@ pygame.display.set_caption("A bit Racey")
 clock = pygame.time.Clock()
 
 #
+#load image
+
+carimg = pygame.image.load("car.png")
+
+#display it where to display?
+
+def car(x,y):
+	gameDisplay.blit(carimg,(x,y))#it will display at x,y
+
+
+x = (display_width*0.45)
+y = (display_height*.7)
+
+
 
 crashed = False
-
+x_change = 0
 
 while not crashed:
 
@@ -44,16 +77,48 @@ while not crashed:
 			
 			crashed = True #out of loop
 
-		print(event) #prints all the event being tracked
-					#this will work only for a single frame
+		#print(event) #prints all the event being tracked
+		#this will work only for a single frame
+
+
+
+		if event.type == pygame.KEYDOWN:
+			if event.key == pygame.K_LEFT:
+				x_change = -5
+			elif event.key == pygame.K_RIGHT:
+				x_change = 5
+
+		if event.type == pygame.KEYUP:
+			if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+				x_change = 0
+
+#change x 
+	x+=x_change
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
 
 #you do a lot of thing in background
 #then you push it on screen 
 #when all computation is done you display it
 
+	#game background it should be before car else car white
+	gameDisplay.fill(white)
 	
+	#show car
+	car(x,y)
 	#we'll update our events
-
 	pygame.display.update()
 
 	#or u can put a parameter in update(a para) it will update that thing only
@@ -66,8 +131,8 @@ while not crashed:
 
 	#uninitiate pygame
 
-	pygame.quit()#stops
-	quit()
+	#pygame.quit()#stops
+	#quit()
 
 
 
