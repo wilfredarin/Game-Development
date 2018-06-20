@@ -150,7 +150,7 @@ def button(msg,x,y,w,h,ic,ac,action=None):
 
 def unpause():	
 	global pause
-	pygame.mixer.musice.unpause()
+	pygame.mixer.music.unpause()
 	pause = False	
 	
 #copied from game intro
