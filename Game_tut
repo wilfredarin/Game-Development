@@ -41,7 +41,12 @@ How to Display text:
 	font = pygame.font.SysFont(None,25)
 	text  = font.render("Doged: "+str(count),True,black)
 	
+	gives rect around the text = text.get_rect()
+
 	gameDisplay.blit(text,(0,0))
+
+	gameDisplay.fill(color)-----fills it with color
+
 
 
 how to update:
@@ -71,6 +76,9 @@ event_handeling  :
 		
 		click = pygame.mouse.get_pressed()
 		#three values left,mid ryt 0 0 0
+
+
+	
 
 
 
