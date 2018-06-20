@@ -10,6 +10,11 @@ car_crash = pygame.mixer.Sound("car.wav")
 #adding music
 pygame.mixer.music.load("car_music.wav")
 
+#there is no music in this repository
+#so any download any wav for mat music
+# google drive : https://drive.google.com/drive/u/0/folders/0B8Z3qtbgx8v0WmE5T2VXRmR6bUE
+#download link : https://bjokib.com/background-music-free-download/
+
 
 display_width = 800
 display_height = 600
