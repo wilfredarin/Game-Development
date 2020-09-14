@@ -2,4 +2,6 @@
 This is a simple but exciting game, with graphics built using Pygame. All you need to do is downlaod the game and play.
 
 
-![alt text](https://www.extremetech.com/wp-content/uploads/2019/07/Season-5-Berlin-racing.jpg)
+
+![alt text](https://github.com/wilfredarin/Racing-Car/blob/master/gamePic1.png?raw=true)
+![alt text](https://github.com/wilfredarin/Racing-Car/blob/master/gamePic2.png?raw=true)
