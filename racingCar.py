@@ -8,7 +8,7 @@ pygame.init()
 
 car_crash = pygame.mixer.Sound("car.wav")
 #adding music
-pygame.mixer.music.load("car_music.wav")
+pygame.mixer.music.load("Car_Music.mp3")
 
 #there is no music in this repository
 #so any download any wav for mat music
